@@ -23,6 +23,7 @@ body {
   box-shadow: 0 0 15px #0000001f;
 }
 fieldset {
+  max-width: 100%;
   padding: 20px;
   margin: 10px 0;
   border: 1px solid rgb(158, 158, 158);
@@ -41,7 +42,7 @@ legend {
 }
 input {
   padding: 8px 8px;
-  width: 100%;
+  min-width: 100%;
   font-size: 17px;
   font-weight: 500;
   outline: none;
@@ -50,10 +51,26 @@ input {
   background: #d5d5d5;
 }
 
-@media (max-width: 550px) {
+@media (max-width: 767px) {
   .container {
-    width: 100%;
+    min-width: 100%;
     margin: 0 auto;
+  }
+  input {
+    min-width: 100%;
+  }
+  fieldset {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  input {
+    width: 100%;
   }
   fieldset {
     padding: 10px;
